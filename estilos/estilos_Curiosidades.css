@@ -1,0 +1,248 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 100px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    bottom: -10px;
+    left:  -10px;
+    right: -10px;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fundo_curiosidades.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+}
+
+.titulo-banner {
+    background: rgba(60, 20, 50, 0.75);
+    padding: 15px 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(6px);
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 3.5rem;
+    color: #f8f4e8;
+    text-align: center;
+    margin: 40px 0;
+    text-shadow:
+        1px 1px 0 #8d8678,
+        2px 2px 0 #8d8678,
+        3px 3px 0 #8d8678,
+        6px 6px 15px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+}   
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 4px;
+    background: #d4af37;
+    margin: 15px auto 0;
+    border-radius: 999px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
+    padding: 40px;
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0, 91, 235, 0.16);
+    border: 2px solid rgba(255,255,255,0.4);
+    max-width: 900px;
+    width: min(900px, 90%);
+    height: 350px;
+    min-height: 350px;
+    overflow: visible;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.95);
+    justify-content: center;
+}
+/* Dinossauros */
+#draconyx         { background-image: url('../img/banners_curiosidades/draconyx.png' ); }
+#allosauros       { background-image: url('../img/banners_curiosidades/Allosaurus.png'); }
+#lourinhanosaurus { background-image: url('../img/banners_curiosidades/lourinhano.png'); }
+#lourinhasaurus   { background-image: url('../img/banners_curiosidades/lourinhanosaurus.png'); }
+#ceratosauros     { background-image: url('../img/banners_curiosidades/ceratosaurus.png'); }
+#lusovenator      { background-image: url('../img/banners_curiosidades/lusove.png'); }
+#miragaia         { background-image: url('../img/banners_curiosidades/miragaia.png'); }  
+#lusotitan        { background-image: url('../img/banners_curiosidades/lusotitan.png'); }
+#stegosaurus      { background-image: url('../img/banners_curiosidades/stegosaurus.png'); }
+#torvosaurus      { background-image: url('../img/banners_curiosidades/torvo.png'); }
+
+/* repteis */
+#lusognathus  { background-image: url('../img/banners_curiosidades/lusognathus.png' ); }
+#belemite     { background-image: url('../img/banners_curiosidades/#' ); }
+#amonite      { background-image: url('../img/banners_curiosidades/#' ); }
+#plesiossauro { background-image: url('../img/banners_curiosidades/Plesiosaurus.png' ); }
+#ictiossauro  { background-image: url('../img/banners_curiosidades/ictiosa.png' ); }
+#Ophiussasuchus { background-image: url('../img/banners_curiosidades/#' ); }
+
+
+
+
+.text-content {
+    max-width: 200px;
+    width: min(200px, 100%);
+    max-height: 280px;
+    min-height: 240px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    border: 2px solid rgba(218, 141, 54, 0.9);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    color: #1f2937;
+}
+
+.curiosidade {
+    position: absolute;
+    top: 80px;
+    right: -300px;
+    width: 240px;
+    max-width: 240px;
+    background: #fef3c7;
+    padding: 10px 15px;
+    border-left: 5px solid #f59e0b;
+    border-radius: 8px;
+    font-weight: 400;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+.curiosidade-direita { right: -300px; }
+.curiosidade-esquerda { left: -300px; }
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.dino-image {
+    width: 340px;
+    height: 220px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 15px;
+    flex-shrink: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.text-content h1 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-size: 1.0rem;
+}
+
+.text-content p {
+    margin: 8px 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.button-voltar {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 999;
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-voltar:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.teropode    { background: #dc2626; }
+.estegossauro { background: #f59e0b; }
+.Ornitopode  { background: #16a34a; }
+.sauropode   { background: #2563eb; }
+
+.pterossauro    { background: #7c3aed; } /* purple - flying reptiles */
+.cefalopode     { background: #0891b2; } /* teal - ammonites/belemnites */
+.plesiossauria  { background: #1e40af; } /* deep blue - marine reptiles */
+.ictiossauria   { background: #0ea5e9; } /* light blue - marine reptiles */
+.crocodilomorfo { background: #15803d; } /* green - crocodile relatives */
+
+.curiosidade {
+    background: #fef3c7;
+    padding: 10px 15px;
+    border-left: 5px solid #f59e0b;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        min-height: auto;
+        height: auto;
+        padding: 30px;
+    }
+
+    .dino-image {
+        width: 220px;
+        height: auto;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+}

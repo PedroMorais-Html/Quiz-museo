@@ -1,0 +1,335 @@
+  <!DOCTYPE html>
+  <html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos_quiz_med_dif.css">
+    <title>Quiz-pessoal</title>
+  </head>
+  <body>
+
+    <!-- custom popup -->
+    <div id="popup-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:16px; padding:32px 28px; max-width:380px; width:90%; text-align:center; box-shadow:0 24px 48px rgba(0,0,0,0.2);">
+        <img id="popup-img" src="" alt="" style="width:120px; height:120px; object-fit:contain; display:block; margin:0 auto 16px;">
+        <p id="popup-title" style="margin:0 0 8px; font-size:1.2rem; font-weight:700; color:#111827;"></p>
+        <p id="popup-message" style="margin:0 0 24px; font-size:0.95rem; color:#6b7280; line-height:1.5;"></p>
+        <button id="popup-btn" style="padding:12px 32px; background:#2563eb; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Continuar</button>
+      </div>
+    </div>
+
+    <a href="../menu_quizes.html" class="button-voltar">Voltar</a>
+    <div class="score-badge">Pergunta: <span class="score-count">1</span> / 7</div>
+
+    <div class="quiz-wrapper">
+
+    <!-- PERGUNTA 1 -->
+  <section class="question quiz-pessoal ">
+    <h1>Quando trabalhas num projeto, preferes...</h1>
+    <div class="options-grid">
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="A">
+          Liderar tudo sozinho
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          Trabalhar em equipa
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="C">
+          Adaptar-me à situação
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 2 -->
+  <section class="question quiz-pessoal">
+    <h1>Num grupo de amigos costumas ser...</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="A">
+          O que toma decisões
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          O que une toda a gente
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="D">
+          O mais divertido
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 3 -->
+  <section class="question quiz-pessoal" >
+    <h1>Se encontrasses um local desconhecido...</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="E">
+          Explorava imediatamente
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          Chamava os amigos
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="F">
+          Observava primeiro
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 4 -->
+  <section class="question quiz-pessoal" >
+    <h1>Qual destas qualidades valorizas mais?</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="A">
+          Coragem
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          Lealdade
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="F">
+          Criatividade
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 5 -->
+  <section class="question quiz-pessoal" >
+    <h1>Quando aparece um problema difícil...</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="A">
+          Enfrento-o de frente
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          Peço ajuda
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="C">
+          Procuro uma solução diferente
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 6 -->
+  <section class="question quiz-pessoal" >
+    <h1>Qual destes locais gostarias mais de explorar?</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="E">
+          Uma montanha
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="C">
+          Uma floresta
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="D">
+          Uma ilha misteriosa
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERGUNTA 7 -->
+  <section class="question quiz-pessoal">
+    <h1>Se fosses um dinossauro, serias _____</h1>
+    <div class="options-grid">
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="A">
+          Forte e destemido
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="D">
+          Calmo e amigável
+        </button>
+      </article>
+
+      <article class="option-card text-only">
+        <button type="button" class="answer-button" data-choice="B">
+          Rápido e inteligente
+        </button>
+      </article>
+    </div>
+  </section>
+    </div>
+
+    <script>
+      const tally = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
+      let answeredCount = 1;
+      const totalQuestions = document.querySelectorAll('.question').length;
+      const scoreCount = document.querySelector('.score-count');
+
+      const overlay = document.getElementById('popup-overlay');
+      const popupTitle = document.getElementById('popup-title');
+      const popupMessage = document.getElementById('popup-message');
+      const popupBtn = document.getElementById('popup-btn');
+
+     const popupImg = document.getElementById('popup-img');
+
+      function showPopup(title, message, imgSrc, onClose) {
+        popupTitle.textContent = title;
+        popupMessage.textContent = message;
+
+        if (imgSrc) {
+          popupImg.src = imgSrc;
+          popupImg.style.display = 'block';
+        } else {
+          popupImg.style.display = 'none';
+        }
+
+        popupBtn.onclick = () => {
+          overlay.style.display = 'none';
+          if (onClose) onClose();
+        };
+        overlay.style.display = 'flex';
+      }
+
+      function goToMenu() {
+        window.location.href = '../menu_quizes.html';
+      }
+
+      // EDIT THESE — placeholder results, swap in whatever you actually want shown
+      const RESULTS = {
+
+  A: {
+  title: '🦖 Torvossauros gurneyi',
+  img: "../img/torvo.png",
+  message: 'És corajoso, confiante e gostas de liderar. Enfrentas desafios sem medo e tens uma personalidade forte.'
+  },
+
+  B: {
+  title: '🦕 Lourinhasaurus alenquerensis',
+  img: "../img/Lourinhasaurus.png",
+  message: 'És sociável, amigável e valorizas as amizades. Gostas de trabalhar em equipa e ajudar os outros.'
+  },
+
+  C: {
+  title: '🏃 Lusovenator santosi',
+  img: "../img/lusove.png",
+  message: 'És criativo, rápido a pensar e adaptável. Gostas de explorar novas ideias e aventuras.'
+},
+D: {
+  title: '🦴 Miragaia longicollum',
+  img: "../img/miragaia.png",
+  message: 'És calmo, observador e paciente. Preferes analisar as situações antes de agir.'
+},
+E: {
+  title: '🦕 Lusotitan atalaiensis',
+  img: "../img/lusotitan.png",
+  message: 'És persistente, trabalhador e confiável. Mesmo perante dificuldades continuas sempre em frente.'
+},
+F: {
+  title: '🐉 Draconyx loureiroi',
+  img: "../img/icon_quiz_fac.png",
+  message: 'És imaginativo, original e cheio de ideias diferentes. Gostas de encontrar soluções criativas.'
+}
+  };
+
+      function finishQuiz() {
+        const highest = Math.max(...Object.values(tally));
+        const winners = Object.keys(tally).filter(key => tally[key] === highest);
+        const winner = winners[Math.floor(Math.random() * winners.length)]
+        const percent = Math.round((tally[winner] / totalQuestions) * 100);
+        setTimeout(() => {
+          showPopup(
+            RESULTS[winner].title + ` (${percent}%)`,
+            RESULTS[winner].message,
+            RESULTS[winner].img,   // ← new
+            goToMenu
+          );
+        }, 300);
+      }
+
+      function scrollToNextQuestion(currentQuestion) {
+        const next = currentQuestion.nextElementSibling;
+        if (next && next.classList.contains('question')) {
+          next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      document.querySelectorAll('.question').forEach((question) => {
+        const buttons = question.querySelectorAll('.answer-button');
+        let answered = false;
+
+        buttons.forEach((button) => {
+          button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (answered) return;
+            answered = true;
+            answeredCount += 1;
+            scoreCount.textContent = answeredCount;
+            
+            const choice = button.dataset.choice;
+            tally[choice] += 1;
+
+            question.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            button.closest('.option-card').classList.add('selected');
+            buttons.forEach(btn => btn.disabled = true);
+
+            scrollToNextQuestion(question);
+
+            if (answeredCount === totalQuestions) {
+              finishQuiz();
+            }
+          });
+
+          const card = button.closest('.option-card');
+          if (card) card.addEventListener('click', () => button.click());
+        });
+      });
+
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.addEventListener('load', () => {
+        const firstQuestion = document.querySelector('.question');
+        if (firstQuestion) {
+          firstQuestion.scrollIntoView({ behavior: 'auto', block: 'center' });
+        }
+      });
+      
+    
+
+    </script>
+  </body>
+  </html>

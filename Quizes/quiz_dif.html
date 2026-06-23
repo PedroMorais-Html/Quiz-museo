@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz- Difícil</title>
+    <link rel="stylesheet" href="../estilos/estilos_quiz_med_dif.css">
+
+    <!-- custom popup -->
+  <div id="popup-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px 28px; max-width:380px; width:90%; text-align:center; box-shadow:0 24px 48px rgba(0,0,0,0.2);">
+      <p id="popup-title" style="margin:0 0 8px; font-size:1.2rem; font-weight:700; color:#111827;"></p>
+      <p id="popup-message" style="margin:0 0 24px; font-size:0.95rem; color:#6b7280; line-height:1.5;"></p>
+      <button id="popup-btn" style="padding:12px 32px; background:#2563eb; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Continuar</button>
+      <button id="popup-secondary-btn" style="display:none; margin-top:12px; padding:12px 32px; background:#10b981; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Reiniciar</button>
+    </div>
+  </div>
+</head>
+<body>
+
+    <a href="../menu_quizes.html" class="button-voltar">Voltar</a>  
+    <div class="score-badge">Erros: <span class="score-count">0</span> / 4</div>
+    <div class="quiz-wrapper">
+      
+      <!-- PERGUNTA 1 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que até mesmo ovos de dinossauros terrestres são encontrados perto do mar e rios" data-feedback-wrong="Opah, erraste tavas quase lá.">
+        <h1>Qual é o nome da Praia aonde foram encontrados os primeiros 100 ovos?</h1>
+        <div class="question-image">
+          <img src="../img/praia.png" alt="praia">
+        </div>          
+                            
+        <div class="options-grid">
+
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: Praia de Paimogo</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: Praia da Areia Branca</button>
+          </article>
+
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: Praia da Consolação</button>
+          </article>
+        
+        </div>
+      </section>
+
+      <!-- PERGUNTA 2 -->
+      <section class="question" data-correct="C" data-feedback-correct="Correto! Sabias que as vertebras do Miragaia Longicollum eram completamente gigantes das de outros dinossauros?" data-feedback-wrong="Errado — ele tem 17 vértebras, o que é um número impressionante para um dinossauro.">
+        <h1>Quantas vertebras tem o <em>Miragaia longicollum</em>?</h1>
+        <div class = "question-image">
+          <img src="../img/miragaia.png" alt="Miragaia">
+        </div>
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: 10</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: 15</button>
+          </article>
+        
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: 17</button>
+          </article>
+        
+        </div>
+
+     </section>
+
+        <!-- PERGUNTA 3 -->
+      <section class="question" data-correct="B" data-feedback-correct="Correto! Sabias que foi o primeiro pterossauro descoberto e descrito exclusivamente em Portugal?" data-feedback-wrong="Errado — Consegues na próxima.">
+        <h1>O <em>Lusognathus almadrava</em> é um Dinosssauro?</h1>
+        <div class = "question-image">
+          <img src="../img/Lusognathus Almadrava.png" alt="Lusognathus Almadrava">
+        </div>
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: Sim</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: Não</button>
+          </article>
+        
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: Talvez</button>
+          </article>
+        </div>
+      </section>
+
+        <!-- PERGUNTA 4 -->
+      <section class="question" data-correct="B" data-feedback-correct="Correto! Sabias que os Belemites são parecidos com os polvos marinhos da atualidade?" data-feedback-wrong="Errado — eram répteis carnivoros">
+        <h1>Qual era a dieta dos répteis marinhos Belemnites e Amonites, gigantes?</h1>
+        
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: Répteis Herbivoros</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: Répteis Carnívoros</button>
+          </article>
+        
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: Répteis Omnivoros</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 5 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que os Gadusaurus aqualigneus da espécie Ictiossauros eram parecidos igualmente tambem com os peixes espadas da atualidade?" data-feedback-wrong="Errado — Consegues na Próxima!">
+        <h1>Qual destes é o réptil marinho mais proximo de um Golfinho?</h1>
+      
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card">
+            <div class="option-image">
+              <img src="../img/ictiosa.png" alt="Ictiossauros"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Gadusaurus aqualigneus</em></button>
+          </article>
+          
+          <article class="option-card">
+            <div class="option-image"><img src="../img/plesio.png" alt="Plesiossauros"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Plesiossauros moelensis</em></button>
+          </article>
+        
+           <article class="option-card">
+            <div class="option-image"><img src="../img/moso.png" alt="Mosassauros"></div>
+            <button type="button" class="answer-button" data-choice="C"><em>C: Mosassauros hoffmannii </em></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 6 -->
+      <section class="question" data-correct="C" data-feedback-correct="Correto! Sabias que os Ceratossauros eram nômades?" data-feedback-wrong="Errado — os Ceratossauros eram encontrados principalmente na América do Norte, mas também foram encontrados na Europa e África.">
+        <h1>Em que outro continente foi encontrado o <em>Ceratossauros dentisulcatus</em>?</h1>
+        <div class = "question-image">
+          <img src="../img/cerato.png" alt="Ceratossauros">
+        </div>
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: Ásia</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: América do Sul</button>
+          </article>
+        
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: América do Norte</button>
+          </article>
+        </div>
+      </section> 
+      
+      <!-- PERGUNTA 7 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que as galinhas atuais tambem engolem pedras para ajudar na digestão?" data-feedback-wrong="Errado — os Lourinhanossauros engoliam pedras para ajudar na digestão, um comportamento conhecido como gastrolitismo.">
+        <h1>Porquê a maioria dos dinossauos engoliam pedras?</h1>
+        <div class = "question-image">
+          <img src="../img/lourinhanosaurus.png" alt="Lourinhanosaurus">
+        </div>
+        <div class="options-grid options-text-only">
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: Ajudar na digestão</button>
+          </article>
+          
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: Dieta </button>
+          </article>
+        
+           <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="C">C: Confundiam com ervas</button>
+          </article>
+        </div>
+      </section>
+</body>
+
+<script>
+  let wrongCount = 0;
+  let answeredCount = 0;
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const wrongCountDisplay = document.querySelector('.score-count');
+
+  const overlay = document.getElementById('popup-overlay');
+  const popupTitle = document.getElementById('popup-title');
+  const popupMessage = document.getElementById('popup-message');
+  const popupBtn = document.getElementById('popup-btn');
+  const popupSecondaryBtn = document.getElementById('popup-secondary-btn');
+
+  function showPopup(title, message, onClose, secondaryConfig) {
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+    popupBtn.textContent = secondaryConfig?.primaryText || 'Continuar';
+    popupBtn.onclick = () => {
+      overlay.style.display = 'none';
+      if (onClose) onClose();
+    };
+
+    if (secondaryConfig) {
+      popupSecondaryBtn.textContent = secondaryConfig.secondaryText;
+      popupSecondaryBtn.style.display = 'inline-block';
+      popupSecondaryBtn.onclick = () => {
+        overlay.style.display = 'none';
+        if (secondaryConfig.secondaryAction) secondaryConfig.secondaryAction();
+      };
+    } else {
+      popupSecondaryBtn.style.display = 'none';
+      popupSecondaryBtn.onclick = null;
+    }
+
+    overlay.style.display = 'flex';
+  }
+
+  function restartQuiz() {
+    window.location.href = 'quiz_dif.html';
+  }
+
+  function goToMenu() {
+    window.location.href = '../menu_quizes.html';
+  }
+
+  function finishQuiz() {
+    setTimeout(() => {
+      const passed = wrongCount < 4;
+      if (passed) {
+        localStorage.setItem('quiz_dif_passed', '1');
+        localStorage.removeItem('quiz_easy_passed');
+        localStorage.removeItem('quiz_med_passed');
+      }
+
+      showPopup(
+        '🏆 Quiz Terminado!',
+        `Terminaste o quiz com ${wrongCount} erro(s) de ${totalQuestions}. Tenta a próxima dificuldade!`,
+        () => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = 'menu_quizes.html';
+          }
+        }
+      );
+    }, 300);
+  }
+  window.addEventListener('load', () => {
+    const firstQuestion = document.querySelector('.question');
+    if (firstQuestion) {
+      firstQuestion.scrollIntoView({ behavior: 'auto', block: 'center' });
+    }
+  });
+  function scrollToNextQuestion(currentQuestion) {
+    const next = currentQuestion.nextElementSibling;
+    if (next && next.classList.contains('question')) {
+      next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  document.querySelectorAll('.question').forEach((question) => {
+    const correct = question.dataset.correct;
+    const feedbackCorrect = question.dataset.feedbackCorrect || 'Correto!';
+    const feedbackWrong = question.dataset.feedbackWrong || 'Errado.';
+    const buttons = question.querySelectorAll('.answer-button');
+    let answered = false;
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (answered) return;
+        answered = true;
+        answeredCount += 1;
+
+        const choice = button.dataset.choice;
+        const isCorrect = choice === correct;
+
+        question.querySelectorAll('.option-card').forEach(c => c.classList.remove('correct', 'wrong'));
+        button.closest('.option-card').classList.add(isCorrect ? 'correct' : 'wrong');
+        buttons.forEach(btn => btn.disabled = true);
+
+        if (!isCorrect) {
+          wrongCount += 1;
+          wrongCountDisplay.textContent = wrongCount;
+        }
+
+        scrollToNextQuestion(question);
+        setTimeout(() => {
+          if (!isCorrect && wrongCount === 4) {
+            showPopup(
+              '🚨 4 Erros!',
+              'Ficaste com 4 erros. Queres reiniciar ou voltar ao menu?',
+              goToMenu,
+              {
+                primaryText: 'Menu',
+                secondaryText: 'Reiniciar',
+                secondaryAction: restartQuiz
+              }
+            );
+            return;
+          }
+
+          showPopup(
+            isCorrect ? '✅ Correto!' : '❌ Errado!',
+            isCorrect ? feedbackCorrect : feedbackWrong,
+            () => { if (answeredCount === totalQuestions) finishQuiz(); }
+          );
+        }, 300);
+      });
+
+      const card = button.closest('.option-card');
+      if (card) card.addEventListener('click', () => button.click());
+    });
+  });
+</script>
+</html>

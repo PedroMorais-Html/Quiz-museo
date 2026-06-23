@@ -1,0 +1,101 @@
+html {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #f4f7fd url('../img/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    min-height: 100vh;        /* fix */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: transparent;  /* let html handle it */
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 100px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 24px rgba(0, 91, 235, 0.16);
+    min-width: 700px;
+    background: white url("../img/banners_curiosidades/bg_banner_curiosidad.png");
+    background-size: cover;
+    background-position-x: -5px;
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.titulo {
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+    font-weight: Caslon, serif;
+    color: #333333;
+    margin-bottom: 20px;
+
+}
+
+.but_menus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.75rem;
+    min-width: 180px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1e21cc 0%, #008cff 100%);
+    border: 2px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 10px 24px rgba(0, 91, 235, 0.16);
+}
+
+.but_menus:hover,
+.but_menus:focus {
+    background: linear-gradient(135deg, #0056D6 0%, #003EA4 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 91, 235, 0.24);
+}
+
+.but_menus:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(0, 91, 235, 0.2);
+}
+
+.button-voltar {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 999;
+  display: inline-block;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-voltar:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}

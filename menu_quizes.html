@@ -1,0 +1,113 @@
+    <!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos/estilos_menu_quiz.css">
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+        <title>Menu Quizes</title>
+            
+    </head>
+    <body>
+
+        
+        <a href="menu.html" class="button-voltar">Voltar</a>
+        <a id="reset-quizzes" class="button-voltar">Reiniciar</a>
+
+        <h1 class="titulo">O que tu sabes sobre dinossauros?</h1>
+        
+            <div class="button-container" >
+
+                <div class="quiz-card" onclick="window.location.href='Quizes/quiz.html'">
+                    <img src="img/icon_quiz_fac.png" alt="quizfacil" class="quiz-icon">
+                    <a class="but_menus">Quiz - fácil</a>
+                </div>
+
+                <div class="quiz-card" id="card-med" data-level="quiz_med" onclick="tryOpen('quiz_med')">
+                    <img src="img/icon_quiz_med.png" alt="quizmedio" class="quiz-icon">
+                        <a class="but_menus">Quiz - Médio</a>
+                </div>
+
+                <div class="quiz-card" id="card-dif" data-level="quiz_dif" onclick="tryOpen('quiz_dif')">
+                    <img src="img/icon_quiz_dif.png" alt="quizdificil" class="quiz-icon">
+                    <a class="but_menus">Quiz - Difícil</a>
+                </div>
+
+
+            </div>
+            
+            <div class ="quiz-pessoal">
+                <div class="quiz-card" id = "quiz-pessoal" onclick="window.location.href='Quizes/quiz_pessoal.html'">
+                    <img src="img/ovo_dino.png" alt="quizpessoal" class="quiz-icon">
+                    <a class ="but_menus">Quiz - Pessoal</a>
+                </div>        
+            </div>
+
+            <script>
+                // Lock/unlock quiz cards based on localStorage flags
+                function updateLocks() {
+                    const medUnlocked = localStorage.getItem('quiz_easy_passed') === '1';     
+                    const difUnlocked = localStorage.getItem('quiz_med_passed') === '1';
+
+                    const cardMed = document.getElementById('card-med');
+                    const cardDif = document.getElementById('card-dif');
+                    const imgMed = cardMed && cardMed.querySelector('img');
+                    const imgDif = cardDif && cardDif.querySelector('img');
+
+                    if (!medUnlocked) {
+                        cardMed.classList.add('locked');
+                        cardMed.title = 'Desbloqueia passando o Quiz - Fácil com >4 respostas corretas.';
+                        if (imgMed) imgMed.src = 'img/vetores/cadeado.png';
+                    } else {
+                        cardMed.classList.remove('locked');
+                        cardMed.title = '';
+                        if (imgMed) imgMed.src = 'img/icon_quiz_med.png';
+                    }
+
+                    if (!difUnlocked) {
+                        cardDif.classList.add('locked');
+                        cardDif.title = 'Desbloqueia passando o Quiz - Médio com >4 respostas corretas.';
+                        if (imgDif) imgDif.src = 'img/vetores/cadeado.png';
+                    } else {
+                        cardDif.classList.remove('locked');
+                        cardDif.title = '';
+                        if (imgDif) imgDif.src = 'img/icon_quiz_dif.png';
+                    }
+                }
+
+                function tryOpen(level) {
+                    if (level === 'quiz_med') {
+                        if (localStorage.getItem('quiz_easy_passed') === '1') {
+                            window.location.href = 'Quizes/quiz_med.html';
+                        } else {
+                            // locked: do nothing
+                        }
+                    } else if (level === 'quiz_dif') {
+                        if (localStorage.getItem('quiz_med_passed') === '1') {
+                            window.location.href = 'Quizes/quiz_dif.html';
+                        } else {
+                            // locked: do nothing
+                        }
+                    }
+                }
+
+                function resetQuizzes() {
+                    localStorage.removeItem('quiz_easy_passed');
+                    localStorage.removeItem('quiz_med_passed');
+                    localStorage.removeItem('quiz_dif_passed');
+                    updateLocks();
+                }
+
+                document.getElementById('reset-quizzes').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    if (confirm('Tens a certeza que desejas reiniciar os quizzes e bloquear novamente os níveis?')) {
+                        resetQuizzes();
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', updateLocks);
+            </script>
+    </body>
+    </html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Fácil</title>
+  <link rel="stylesheet" href="../estilos/estilos_quiz.css">
+
+  
+</head>
+<body>
+  <div id="popup-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px 28px; max-width:380px; width:90%; text-align:center; box-shadow:0 24px 48px rgba(0,0,0,0.2);">
+      <p id="popup-title" style="margin:0 0 8px; font-size:1.2rem; font-weight:700; color:#111827;"></p>
+      <p id="popup-message" style="margin:0 0 24px; font-size:0.95rem; color:#6b7280; line-height:1.5;"></p>
+      <button id="popup-btn" style="padding:12px 32px; background:#2563eb; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Continuar</button>
+      <button id="popup-secondary-btn" style="display:none; margin-top:12px; padding:12px 32px; background:#10b981; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Reiniciar</button>
+    </div>
+  </div>
+
+  <a href="../menu_quizes.html" class="button-voltar">Voltar</a>
+  <div class="score-badge">Erros: <span class="score-count">0</span> / 4</div>
+    <div class="quiz-wrapper">   
+      
+      <!-- PERGUNTA 1 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que o Lusotitan Atalaiensis tinha entre 20 a 25 metros de comprimento?" data-feedback-wrong="Opah, erraste.">
+        <h1>Qual destes dinossauros da Lourinhã era maior?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"><img src="../img/lusotitan.png" alt="Lusotitan"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Lusotitan atalaiensis</em></button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/lourinhanosaurus.png" alt="Lourinhasaurus"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Lourinhasaurus alenquerensis</em></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 2 -->
+      <section class="question" data-correct="B" data-feedback-correct="Correto, Lusovenator é mais rápido! Sabias que era capaz de atingir velocidades de até 40 km/h?" data-feedback-wrong="Errado — o Lusovenator é mais rápido.">
+        <h1>Que dinossauro é mais rápido?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"><img src="../img/lusotitan.png" alt="Lusotitan"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Lusotitan atalaiensis</em></button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/lusove.png" alt="Lusovenator"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Lusovenator santosi</em></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 3 -->
+      <section class="question" data-correct="B" data-feedback-correct="Correto! Sabias que o jurássico superior durou cerca de  18,5 milhões de anos?" data-feedback-wrong="Opah, erraste.">
+        <h1>Os dinossauros da lourinhã viveram em qual periodo?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"><img src="../img/jurassico_inferior.jpg" alt="Jurássico Inferior"></div>
+            <button type="button" class="answer-button" data-choice="A">A: Jurássico Inferior</button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/jurassico_superior.png" alt="Jurássico Superior"></div>
+            <button type="button" class="answer-button" data-choice="B">B: Jurássico Superior</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 4 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que o torvossaurus era o considerado um super-predador?" data-feedback-wrong="Opah, erraste.">
+        <h1>Qual é o Maior Dinossauro Carnívoro da Lourinhã?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"><img src="../img/torvo.png" alt="Torvossauros"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Torvossauros gurneyi</em></button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/lusove.png" alt="Lusovenator"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Lusovenator santosi</em></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 5 -->
+      <section class="question" data-correct="B" data-feedback-correct="Correto! Sabias que o Ceratossauros era o único dinossauro da Lourinhã que tinha um chifre no nariz?" data-feedback-wrong="Opah, erraste.">
+        <h1>Qual dos Dinossauros tem um chifre no nariz?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"><img src="../img/Lourinhasaurus.png" alt="Lourinhasaurus"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Lourinhasaurus alenquerensis</em></button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/cerato.png" alt="Ceratossauros"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Ceratossauros dentisulcatus</em></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 6 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que grande maioria dos dinossauros foram extintos por um impacto de asteróide?" data-feedback-wrong="Opah, erraste.">
+        <h1>Há quanto tempo os dinossauros foram extintos?</h1>
+        <div class="options-grid options-text-only">
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="A">A: 66 milhões de anos</button>
+          </article>
+          <article class="option-card text-only">
+            <button type="button" class="answer-button" data-choice="B">B: 65 milhões de anos</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERGUNTA 7 -->
+      <section class="question" data-correct="A" data-feedback-correct="Correto! Sabias que o Lusognathus Almadrava era um dos primeiros dinossauros a desenvolver penas?" data-feedback-wrong="Opah, erraste.">
+        <h1>Qual destes é que pertencia há Lourinhã?</h1>
+        <div class="options-grid">
+          <article class="option-card">
+            <div class="option-image"> <img src="../img/Lusognathus Almadrava.png" alt="Lusognathus"></div>
+            <button type="button" class="answer-button" data-choice="A"><em>A: Lusognathus Almadrava</em></button>
+          </article>
+          <article class="option-card">
+            <div class="option-image"><img src="../img/moso.png" alt="Mosassauros"></div>
+            <button type="button" class="answer-button" data-choice="B"><em>B: Mosassauros</em></button>
+          </article>
+        </div>
+      </section>
+    </div>
+    
+</body>
+
+  <!-- ONLY ONE SCRIPT -->
+  <script>
+  let wrongCount = 0;
+  let answeredCount = 0;
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const wrongCountDisplay = document.querySelector('.score-count');
+
+  const overlay = document.getElementById('popup-overlay');
+  const popupTitle = document.getElementById('popup-title');
+  const popupMessage = document.getElementById('popup-message');
+  const popupBtn = document.getElementById('popup-btn');
+  const popupSecondaryBtn = document.getElementById('popup-secondary-btn');
+
+  function showPopup(title, message, onClose, secondaryConfig) {
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+    popupBtn.textContent = secondaryConfig?.primaryText || 'Continuar';
+    popupBtn.onclick = () => {
+      overlay.style.display = 'none';
+      if (onClose) onClose();
+    };
+
+    if (secondaryConfig) {
+      popupSecondaryBtn.textContent = secondaryConfig.secondaryText;
+      popupSecondaryBtn.style.display = 'inline-block';
+      popupSecondaryBtn.onclick = () => {
+        overlay.style.display = 'none';
+        if (secondaryConfig.secondaryAction) secondaryConfig.secondaryAction();
+      };
+    } else {
+      popupSecondaryBtn.style.display = 'none';
+      popupSecondaryBtn.onclick = null;
+    }
+
+    overlay.style.display = 'flex';
+  }
+
+  function restartQuiz() {
+    window.location.href = 'quiz.html';
+  }
+
+  function goToMenu() {
+    window.location.href = '../menu_quizes.html';
+  }
+
+  function finishQuiz() {
+    setTimeout(() => {
+      const correctCount = totalQuestions - wrongCount;
+      if (correctCount > 4) {
+        localStorage.setItem('quiz_easy_passed', '1');
+      }
+
+      showPopup(
+        '🏆 Quiz Terminado!',
+        `Terminaste o quiz com ${wrongCount} erro(s) de ${totalQuestions}. Tenta a próxima dificuldade!`,
+        () => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = 'menu_quizes.html';
+          }
+        }
+      );
+    }, 300);
+  }
+    window.addEventListener('load', () => {
+    const firstQuestion = document.querySelector('.question');
+    if (firstQuestion) {
+      firstQuestion.scrollIntoView({ behavior: 'auto', block: 'center' });
+    }
+  });
+
+  function scrollToNextQuestion(currentQuestion) {
+    const next = currentQuestion.nextElementSibling;
+    if (next && next.classList.contains('question')) {
+      next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  document.querySelectorAll('.question').forEach((question) => {
+    const correct = question.dataset.correct;
+    const feedbackCorrect = question.dataset.feedbackCorrect || 'Correto!';
+    const feedbackWrong = question.dataset.feedbackWrong || 'Errado.';
+    const buttons = question.querySelectorAll('.answer-button');
+    let answered = false;
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (answered) return;
+        answered = true;
+        answeredCount += 1;
+
+        const choice = button.dataset.choice;
+        const isCorrect = choice === correct;
+
+        question.querySelectorAll('.option-card').forEach(c => c.classList.remove('correct', 'wrong'));
+        button.closest('.option-card').classList.add(isCorrect ? 'correct' : 'wrong');
+        buttons.forEach(btn => btn.disabled = true);
+
+        if (!isCorrect) {
+          wrongCount += 1;
+          wrongCountDisplay.textContent = wrongCount;
+        }
+
+        scrollToNextQuestion(question);
+        setTimeout(() => {
+          if (!isCorrect && wrongCount === 4) {
+            showPopup(
+              '🚨 4 Erros!',
+              'Ficaste com 4 erros. Queres reiniciar ou voltar ao menu?',
+              goToMenu,
+              {
+                primaryText: 'Menu',
+                secondaryText: 'Reiniciar',
+                secondaryAction: restartQuiz
+              }
+            );
+            return;
+          }
+
+          showPopup(
+            isCorrect ? '✅ Correto!' : '❌ Errado!',
+            isCorrect ? feedbackCorrect : feedbackWrong,
+            () => { if (answeredCount === totalQuestions) finishQuiz(); }
+          );
+        }, 300);
+      });
+
+      const card = button.closest('.option-card');
+      if (card) card.addEventListener('click', () => button.click());
+    });
+  });
+</script>
+
+</html>

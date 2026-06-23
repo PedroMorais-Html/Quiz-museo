@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../estilos/estilos_quiz_med_dif.css">
+  <title>Quiz - Médio</title>
+
+
+</head>
+<body>
+  <!-- custom popup -->
+  <div id="popup-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px 28px; max-width:380px; width:90%; text-align:center; box-shadow:0 24px 48px rgba(0,0,0,0.2);">
+      <p id="popup-title" style="margin:0 0 8px; font-size:1.2rem; font-weight:700; color:#111827;"></p>
+      <p id="popup-message" style="margin:0 0 24px; font-size:0.95rem; color:#6b7280; line-height:1.5;"></p>
+      <button id="popup-btn" style="padding:12px 32px; background:#2563eb; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Continuar</button>
+      <button id="popup-secondary-btn" style="display:none; margin-top:12px; padding:12px 32px; background:#10b981; color:#fff; border:none; border-radius:999px; font-size:1rem; font-weight:600; cursor:pointer;">Reiniciar</button>
+    </div>
+  </div>
+
+  
+  <a href="../menu_quizes.html" class="button-voltar">Voltar</a>
+  <div class="score-badge">Erros: <span class="score-count">0</span> / 4</div>
+
+  <div class="quiz-wrapper">
+
+    <!-- PERGUNTA 1 -->
+    <section class="question" data-auto-submit="true" data-correct="C" data-feedback-correct="Correto! Sabias que os dinossauros que nasceram em ninhos tinham um comportamento Social mais desenvolvido?" data-feedback-wrong="Opah, erraste.">
+      <h1>Qual destes dinos tinham ninhos de ovos?</h1>
+      <div class="question-image" id="problema_img_pequena1">
+        <img src="../img/ovo_dino.png" alt="Ninho de ovos">
+      </div>
+
+      <div class="options-grid">
+        <article class="option-card">
+          <div class="option-image"><img src="../img/lusotitan.png" alt="Lusotitan"></div>
+          <button type="button" class="answer-button" data-choice="A"><em>A: Lusotitan atalaiensis</em></button>
+        </article>
+
+        <article class="option-card">
+          <div class="option-image"><img src="../img/icon_quiz_fac.png" alt="Lourinhasaurus"></div>
+          <button type="button" class="answer-button" data-choice="B"><em>B: Draconyx loureiroi</em></button>
+        </article>
+
+        <article class="option-card">
+          <div class="option-image"><img src="../img/torvo.png" alt="Torvossauros"></div>
+          <button type="button" class="answer-button" data-choice="C"><em>C: Torvossauros gurneyi</em></button>
+        </article> 
+
+      </div>
+    </section>
+
+    <!-- PERGUNTA 2 -->
+    <section class="question" data-auto-submit="true" data-correct="A" data-feedback-correct="Correto! Sabias que o Allosaurus tinha uma altura de 4-5 metros e de 8-9 metros de comprimento?" data-feedback-wrong="Opah, erraste.">
+      <h1>Qual é a altura média de um Allosaurus?</h1>
+      <div class="question-image">
+        <img src="../img/allosauros.png" alt="Allosaurus">
+      </div>
+
+      <div class="options-grid options-text-only">
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="A">A: 4-5 metros</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="B">B: 8-9 metros</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="C">C: 10+ metros</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PERGUNTA 3 -->
+    <section class="question" data-auto-submit="true" data-correct="A" data-feedback-correct="Correto! Sabias que Lusotitan vem do latim 'Lusus' (Lourinhã) e 'Titan' (Titã)?" data-feedback-wrong="Opah, erraste.">
+      <h1>O que significa  <em>"Lusotitan"</em>?</h1>
+      <div class="question-image">
+        <img src="../img/lusotitan.png" alt="Lusotitan">
+      </div>
+
+      <div class="options-grid options-text-only">
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="A">A: Titan Lusitano</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="B">B: Titan Português</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="C">C: Titan Luso</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PERGUNTA 4 -->
+    <section class="question" data-auto-submit="true" data-correct="C" data-feedback-correct="Correto! Sabias que os continentes eram todos juntos e foram separando-se com o tempo?" data-feedback-wrong="Opah, erraste.">
+      <h1>No início os continentes estavam unidos e chamava-se ____</h1>
+      <div class="question-image">
+        <img src="../img/pangeia.png" alt="Pangeia">
+      </div>
+
+      <div class="options-grid options-text-only">
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="A">A: Europa</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="B">B: Mega Continente</button>
+        </article>
+
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="C">C: Pangeia</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PERGUNTA 5 -->
+    <section class="question" data-auto-submit="true" data-correct="B" data-feedback-correct="Correto! Sabias que o Miragaia Longicollum tinha um pescoço extremamente longo?" data-feedback-wrong="Opah, erraste.">
+      <h1>Qual é o dinossauro da Lourinhã que é único no mundo?</h1>
+      <br><br><br><br><br><br>
+      
+      <div class="options-grid">
+        <article class="option-card">
+          <div class="option-image"><img src="../img/Lusognathus Almadrava.png" alt="Lusognathus"></div>
+          <button type="button" class="answer-button" data-choice="A"><em>A: Lusognathus Almadrava</em></button>
+        </article>
+        
+        <article class="option-card">
+          <div class="option-image"><img src="../img/miragaia.png" alt="Miragaia"></div>
+          <button type="button" class="answer-button" data-choice="B"><em>B: Miragaia Longicollum</em></button>
+        </article>
+        
+        <article class="option-card">
+          <div class="option-image"><img src="../img/torvo.png" alt="Torvossauros"></div>
+          <button type="button" class="answer-button" data-choice="C"><em>C: Torvossauros gurneyi</em></button>
+        </article>
+      
+      </div>
+    </section>
+
+    <!-- PERGUNTA 6 -->
+    <section class="question" data-auto-submit="true" data-correct="A" data-feedback-correct="Correto! Sabias que a grande maioria dos fósseis até hoje são encontrados nas arribas das praias?" data-feedback-wrong="Opah, erraste.">
+      <h1>Onde foram encontrados os primeiros ovos?</h1>
+      <div class="question-image">
+        <img src="../img/ovo_dino.png" alt="Praia">
+      </div>
+      
+      <div class="options-grid options-text-only">
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="A">A: Arribas</button>
+        </article>
+        
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="B">B: Praias</button>
+        </article>
+        
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="C">C: Rios</button>
+        </article>
+      
+      </div>
+    </section>
+
+    <!-- PERGUNTA 7 -->
+    <section class="question" data-auto-submit="true" data-correct="C" data-feedback-correct="Correto! Sabias Apesar de viverem na mesma época e partilharem a terminação *sauro* (que significa lagarto), os plesiossauros pertenciam a uma linhagem totalmente diferente de répteis " data-feedback-wrong="Opah, erraste.">
+      <h1>O Plesiosauro é um réptil _______?</h1>
+      <div class="question-image" id ="problema_img_pequena2">
+        <img src="../img/plesio.png" alt="Plesiosauro" >
+      </div>
+      
+      <div class="options-grid options-text-only">
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="A">A: Dinossauro</button>
+        </article>
+        
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="B">B: Voador</button>
+        </article>
+        
+        <article class="option-card text-only">
+          <button type="button" class="answer-button" data-choice="C">C: Marinho </button>
+        </article>
+      
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+  let wrongCount = 0;
+  let answeredCount = 0;
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const wrongCountDisplay = document.querySelector('.score-count');
+
+  const overlay = document.getElementById('popup-overlay');
+  const popupTitle = document.getElementById('popup-title');
+  const popupMessage = document.getElementById('popup-message');
+  const popupBtn = document.getElementById('popup-btn');
+  const popupSecondaryBtn = document.getElementById('popup-secondary-btn');
+
+  function showPopup(title, message, onClose, secondaryConfig) {
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+    popupBtn.textContent = secondaryConfig?.primaryText || 'Continuar';
+    popupBtn.onclick = () => {
+      overlay.style.display = 'none';
+      if (onClose) onClose();
+    };
+
+    if (secondaryConfig) {
+      popupSecondaryBtn.textContent = secondaryConfig.secondaryText;
+      popupSecondaryBtn.style.display = 'inline-block';
+      popupSecondaryBtn.onclick = () => {
+        overlay.style.display = 'none';
+        if (secondaryConfig.secondaryAction) secondaryConfig.secondaryAction();
+      };
+    } else {
+      popupSecondaryBtn.style.display = 'none';
+      popupSecondaryBtn.onclick = null;
+    }
+
+    overlay.style.display = 'flex';
+  }
+
+  function restartQuiz() {
+    window.location.href = 'quiz_med.html';
+  }
+
+  function goToMenu() {
+    window.location.href = '../menu_quizes.html';
+  }
+
+  function finishQuiz() {
+    setTimeout(() => {
+      const correctCount = totalQuestions - wrongCount;
+      if (correctCount > 4) {
+        localStorage.setItem('quiz_med_passed', '1');
+      }
+
+      showPopup(
+        '🏆 Quiz Terminado!',
+        `Terminaste o quiz com ${wrongCount} erro(s) de ${totalQuestions}. Tenta a próxima dificuldade!`,
+        () => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            window.location.href = 'menu_quizes.html';
+          }
+        }
+      );
+    }, 300);
+  }
+  window.addEventListener('load', () => {
+    const firstQuestion = document.querySelector('.question');
+    if (firstQuestion) {
+      firstQuestion.scrollIntoView({ behavior: 'auto', block: 'center' });
+    }
+  });
+  function scrollToNextQuestion(currentQuestion) {
+    const next = currentQuestion.nextElementSibling;
+    if (next && next.classList.contains('question')) {
+      next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+  
+
+  document.querySelectorAll('.question').forEach((question) => {
+    const correct = question.dataset.correct;
+    const feedbackCorrect = question.dataset.feedbackCorrect || 'Correto!';
+    const feedbackWrong = question.dataset.feedbackWrong || 'Errado.';
+    const buttons = question.querySelectorAll('.answer-button');
+    let answered = false;
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (answered) return;
+        answered = true;
+        answeredCount += 1;
+
+        const choice = button.dataset.choice;
+        const isCorrect = choice === correct;
+
+        question.querySelectorAll('.option-card').forEach(c => c.classList.remove('correct', 'wrong'));
+        button.closest('.option-card').classList.add(isCorrect ? 'correct' : 'wrong');
+        buttons.forEach(btn => btn.disabled = true);
+
+        if (!isCorrect) {
+          wrongCount += 1;
+          wrongCountDisplay.textContent = wrongCount;
+        }
+
+        scrollToNextQuestion(question);
+        setTimeout(() => {
+          if (!isCorrect && wrongCount === 4) {
+            showPopup(
+              '🚨 4 Erros!',
+              'Ficaste com 4 erros. Queres reiniciar ou voltar ao menu?',
+              goToMenu,
+              {
+                primaryText: 'Menu',
+                secondaryText: 'Reiniciar',
+                secondaryAction: restartQuiz
+              }
+            );
+            return;
+          }
+
+          showPopup(
+            isCorrect ? '✅ Correto!' : '❌ Errado!',
+            isCorrect ? feedbackCorrect : feedbackWrong,
+            () => { if (answeredCount === totalQuestions) finishQuiz(); }
+          );
+        }, 300);
+      });
+
+      const card = button.closest('.option-card');
+      if (card) card.addEventListener('click', () => button.click());
+    });
+  });
+</script>
+</body>
+</html> 
