@@ -1,7 +1,7 @@
         html {
             height: 100%;
             margin: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #f4f7fd url('../img/fundo_mmenu_quiz.png') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #f4f7fd url('../img/fundo_menu_quiz.png') no-repeat center center fixed;
             background-size: cover;
         }
 
