@@ -26,9 +26,7 @@ body::before {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fundo_curiosidades.png') no-repeat center center;
     background-size: cover;
     z-index: -1;
-    transform: translateZ(0);
-    will-change: transform;
-    -webkit-transform: translateZ(0);
+
 }
 
 .titulo-banner {
